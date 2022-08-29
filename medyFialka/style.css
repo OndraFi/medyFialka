@@ -1,0 +1,819 @@
+:root {
+    --main-color: rgb(222, 184, 135);
+
+    --background-color: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+html {
+    margin: 0px;
+    padding: 0px;
+    /* scroll-snap-type: y mandatory;
+*/
+
+    display: block;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.main {
+    background-color: green;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: var(--main-color);
+    position: fixed;
+    top: 0px;
+    border-bottom: 1px solid var(--main-color);
+    z-index: 10;
+}
+
+.header-logo {
+    width: 50%;
+    height: 100%;
+}
+
+.header-logo h1 {
+    margin: 10px;
+}
+
+.header-zalozky {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+    height: 100%;
+    width: 50%;
+    pointer-events: all;
+}
+
+.header-zalozky a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.header-zalozky a:hover {
+    color: white
+}
+
+.menu {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    color: var(--main-color);
+    opacity: 0;
+    z-index: -1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.menu-znak {
+    position: absolute;
+    height: 10px;
+    font-size: 3rem;
+    top: 0px;
+}
+
+#menu-znak-close {
+    opacity: 0;
+}
+
+.mobile-header {
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    background-color: black;
+    height: 200px;
+    z-index: 10;
+    color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    opacity: 0;
+    z-index: -1;
+}
+
+.mobile-header a {
+    text-decoration: none;
+    color: var(--main-color);
+
+}
+
+.mobile-header a:hover {
+    color: white;
+}
+
+.mobile-header p {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    border-bottom: 1px solid var(--main-color);
+    border-top: 1px solid var(--main-color);
+    margin: 0px;
+}
+
+.main-content {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content {
+    width: 45%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.main-text {
+    color: var(--main-color);
+    /*    font-family: 'Rubik Dirt', cursive;
+    font-family: 'Rubik Distressed', cursive;
+*/
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    padding-bottom: 150px;
+}
+
+.main-text h1 {
+    font-size: 6rem;
+}
+
+.main-text h3 {
+    font-size: 3rem;
+}
+
+.main-img {
+    background-image: url(./bee-min.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+/*===produkty===*/
+
+.produkty {
+    background-color: blue;
+}
+
+.pozadi {
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    right: -200px;
+    background-color: var(--main-color);
+    border-radius: 30px;
+    opacity: 0.4;
+    transform: rotate(30deg);
+}
+
+.produkty-content {
+    width: 100%;
+    height: 100%;
+    background: black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: center;
+}
+
+.med {
+    width: 70%;
+    height: 47%;
+    background-color: black;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.med-img {
+    border-radius: 25px;
+    height: 85%;
+    width: 50%;
+    background-image: url(./med-min.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.med-popis {
+    border-radius: 25px;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.med-popis h1 {
+    font-size: 4rem;
+}
+
+.med-popis p {
+    font-size: 1.2rem;
+}
+
+.produkty-cara {
+    width: 100%;
+    height: 1px;
+    background-color: #DEB887;
+}
+
+.med-popis-text {
+    width: 80%;
+    text-align: center;
+    color: var(--main-color);
+}
+
+/*===postup===*/
+.postup {
+    width: 100%;
+    height: 2160px;
+    background: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.postup-content {
+    width: 100%;
+    height: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./cara-svisle.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.postup-nadpis {
+    color: var(--main-color);
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.postup-nadpis h1 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.postup-cara {
+    width: 80%;
+    height: 1px;
+    background-color: var(--main-color);
+}
+
+/*
+.poznamka-vrsek {
+    background-color: black;
+    width: 20%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ruzek {
+    background-color: var(--main-color);
+    width: 20%;
+    height: 30px;
+}
+
+.poznamka-kolo {
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.kolo-1 {
+    left: 30px;
+    bottom: 15px;
+}
+
+.kolo-2 {
+    right: 30px;
+    bottom: 15px;
+}
+*/
+
+.poznamka-vrsek {
+    width: 20%;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+}
+
+.kolo-1 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #DEB887;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kolo-2 {
+    width: 90%;
+    height: 90%;
+    background-color: #180e00;
+    color: var(--main-color);
+    text-align: center;
+    border-radius: 50%;
+}
+
+.kolo-2 h1 {
+    margin-top: 10px;
+}
+
+.poznamka-obal {
+    width: 100%;
+    height: 360px;
+    z-index: 1;
+}
+
+.poznamka-wrapper {
+    position: relative;
+    width: 20%;
+}
+
+.poznamka-container {
+    width: 100%;
+    height: 300px;
+    background-color: var(--main-color);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 22px 19px 3px rgba(222, 184, 135, 0.3);
+}
+
+.poznamka {
+    width: 95%;
+    height: 95%;
+    background-color: #180e00;
+    border-radius: 25px;
+    color: var(--main-color);
+    text-align: center;
+}
+
+.poznamka-1 {
+    left: 40%;
+}
+
+.poznamka-2 {
+    left: 40%;
+}
+
+.poznamka-3 {
+    left: 40%;
+}
+
+.poznamka-4 {
+    left: 40%;
+}
+
+.poznamka-img-left{
+    width: 110%;
+    position: absolute;
+    left: 75%;
+    bottom: -20%;
+    z-index: -1;
+    box-shadow: 0px 22px 19px 3px rgba(222, 184, 135, 0.3);
+}
+
+.poznamka-img-right{
+    width: 110%;
+    position: absolute;
+    bottom: -20%;
+    right: 75%;
+    z-index: -1;
+    box-shadow: 0px 22px 19px 3px rgba(222, 184, 135, 0.3);
+}
+
+/*===kontakty===*/
+
+h2 {
+    padding: 0px;
+    margin: 0px;
+    border-bottom: 1px solid var(--main-color);
+}
+
+.kontakty {
+    padding-top: 150px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.kontakty-text {
+    color: var(--main-color);
+    width: 40%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.kontakty-mapa {
+    width: 40%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kontakty-text-seznam {
+    font-size: 1.2rem;
+}
+
+.kontakty-text-seznam li {
+    display: flex;
+    align-items: center;
+}
+
+/*===kotva=== */
+
+.kotva {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.kotva-cara {
+    width: 100%;
+    height: 1px;
+    background-color: var(--main-color);
+    position: relative;
+    top: 50%;
+}
+
+.kotva-kruh {
+    border-radius: 50%;
+    border: 3px solid var(--main-color);
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-color);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.sipka-kotva {
+    font-size: 3rem;
+}
+
+.kotva-kruh:hover {
+    box-shadow: 0 0 10px 8px #DEB887;
+    font-size: 10rem;
+}
+
+.kotva a {
+    z-index: 2;
+    text-decoration: none;
+}
+
+/*===rozliseni===*/
+
+@media (max-width: 1200px) {
+    .main-text h1 {
+        font-size: 5rem;
+    }
+
+    .main-text h3 {
+        font-size: 2.5rem;
+    }
+
+    .med-popis h1 {
+        font-size: 3rem;
+    }
+
+    .med-popis p {
+        font-size: 1rem;
+    }
+
+    #map {
+        width: 350px;
+        height: 300px;
+    }
+
+    .poznamka-wrapper {
+        width: 40%;
+    }
+
+
+    .poznamka-1 {
+        left: 30%;
+    }
+
+    .poznamka-2 {
+        left: 30%;
+    }
+
+    .poznamka-3 {
+        left: 30%;
+    }
+
+    .poznamka-4 {
+        left: 30%;
+    }
+
+
+}
+
+@media (max-width: 800px) {
+    .main-text h1 {
+        font-size: 4rem;
+    }
+
+    .main-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .main-content {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .main-img {
+        width: 80%;
+        height: 45%;
+    }
+
+
+    .content {
+        width: 80%;
+        height: 45%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header {
+        width: 100vw;
+    }
+
+
+    .menu {
+        z-index: 1;
+        opacity: 1;
+    }
+
+    .header-zalozky {
+        opacity: 0;
+        z-index: -10;
+        pointer-events: none;
+    }
+
+    .med-popis h1 {
+        font-size: 2rem;
+    }
+
+    .med-popis p {
+        font-size: 1rem;
+    }
+
+    .kontakty {
+        flex-direction: column;
+    }
+
+    .kontakty-mapa {
+        width: 80%;
+        height: 40%;
+    }
+
+    .kontakty-text {
+        width: 80%;
+        height: 40%;
+    }
+
+    .kotva-kruh {
+        width: 60px;
+        height: 60px;
+    }
+
+    .sipka-kotva {
+        font-size: 2rem;
+    }
+
+    .poznamka-wrapper {
+        width: 60%;
+    }
+
+    .poznamka-1 {
+        left: 20%;
+    }
+
+    .poznamka-2 {
+        left: 20%;
+    }
+
+    .poznamka-3 {
+        left: 20%;
+    }
+
+    .poznamka-4 {
+        left: 20%;
+    }
+
+    .poznamka-img-left{
+        width: 70%;
+        left: 40%;
+        top: 90%;
+    }
+    
+    .poznamka-img-right{
+        width: 70%;
+        left: -10%;
+        top: 90%;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .med-popis h1 {
+        font-size: 1rem;
+    }
+
+    .med-popis p {
+        font-size: 0.7rem;
+    }
+
+    #map {
+        width: 250px;
+        height: 180px;
+    }
+
+    .poznamka-wrapper {
+        width: 80%;
+    }
+
+    .poznamka-1 {
+        left: 10%;
+    }
+
+    .poznamka-2 {
+        left: 10%;
+    }
+
+    .poznamka-3 {
+        left: 10%;
+    }
+
+    .poznamka-4 {
+        left: 10%;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+    .main-text h1 {
+        font-size: 3rem;
+    }
+
+    .main-text h3 {
+        font-size: 1rem;
+    }
+
+    .main-text {
+        padding: 0px;
+    }
+
+    .header-logo {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media (max-height: 600px) {
+    .main-text h1 {
+        font-size: 3rem;
+    }
+
+    .main-text h3 {
+        font-size: 1rem;
+    }
+
+    .med-popis h1 {
+        font-size: 2rem;
+    }
+
+    .med-popis p {
+        font-size: 1rem;
+    }
+
+    #map {
+        width: 250px;
+        height: 180px;
+    }
+
+    .main-text {
+        padding: 0px;
+        height: 100%;
+    }
+
+    .main-content {
+        justify-content: end;
+    }
+
+    .kontakty-text-seznam {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-height: 400px) {
+    .main-text h1 {
+        font-size: 2rem;
+    }
+
+    .main-text h3 {
+        font-size: 1rem;
+    }
+
+    .kotva-kruh {
+        width: 50px;
+        height: 50px;
+    }
+
+    .sipka-kotva {
+        font-size: 1.5rem;
+    }
+
+    .med-popis h1 {
+        font-size: 1rem;
+    }
+
+    .med-popis p {
+        font-size: 0.7rem;
+    }
+
+    #map {
+        width: 150px;
+        height: 100px;
+    }
+
+}
