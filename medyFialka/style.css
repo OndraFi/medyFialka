@@ -118,7 +118,7 @@ section {
     height: 200px;
     z-index: 100;
     color: var(--main-color);
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-around;
 }
