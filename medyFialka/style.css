@@ -88,11 +88,15 @@ section {
     width: 50px;
     height: 50px;
     color: var(--main-color);
-    opacity: 0;
-    z-index: -1;
+    display: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
+    cursor: pointer;
+}
+
+.menu:hover{
+    color: white;
 }
 
 .menu-znak {
@@ -112,13 +116,11 @@ section {
     width: 100%;
     background-color: black;
     height: 200px;
-    z-index: 10;
+    z-index: 100;
     color: var(--main-color);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    opacity: 0;
-    z-index: -1;
 }
 
 .mobile-header a {
@@ -311,41 +313,6 @@ section {
     height: 1px;
     background-color: var(--main-color);
 }
-
-/*
-.poznamka-vrsek {
-    background-color: black;
-    width: 20%;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.ruzek {
-    background-color: var(--main-color);
-    width: 20%;
-    height: 30px;
-}
-
-.poznamka-kolo {
-    position: relative;
-    background-color: rgb(0, 0, 0);
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-}
-
-.kolo-1 {
-    left: 30px;
-    bottom: 15px;
-}
-
-.kolo-2 {
-    right: 30px;
-    bottom: 15px;
-}
-*/
 
 .poznamka-vrsek {
     width: 20%;
@@ -617,15 +584,13 @@ h2 {
 
 
     .menu {
-        z-index: 1;
-        opacity: 1;
+        display: block;
     }
 
     .header-zalozky {
-        opacity: 0;
-        z-index: -10;
-        pointer-events: none;
+        display: none;
     }
+
 
     .med-popis h1 {
         font-size: 2rem;

@@ -7,8 +7,7 @@ function menu() {
         let header = document.getElementById("mobile-header");
         close.style.opacity = "0";
         open.style.opacity = "1";
-        header.style.zIndex = "-1";
-        header.style.opacity = "0";
+        header.style.display = 'none';
     } else {
         jeZapleMenu = true;
         let open = document.getElementById("menu-znak-open");
@@ -16,8 +15,7 @@ function menu() {
         let header = document.getElementById("mobile-header");
         close.style.opacity = "1";
         open.style.opacity = "0";
-        header.style.zIndex = "4";
-        header.style.opacity = "1";
+        header.style.display = 'flex';
     }
 }
 
