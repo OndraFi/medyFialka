@@ -1,0 +1,10 @@
+//Here you can customize bootstrap
+$primary: #663399;
+$dark: #3d3e41 !default;
+@import "~bootstrap/scss/bootstrap";
+
+
+body{
+  background-color: $dark;
+  color: $light;
+}
