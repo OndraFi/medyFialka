@@ -61,7 +61,8 @@ function IndexPage() {
         for (let i = 0; i < 100; i++) {
             const item = pole[Math.floor(Math.random() * pole.length)];
             items.push(new Item(i * 85, item.text, item.color));
-        };
+        }
+        ;
         posun = 50.0;
         tocka();
     }
@@ -81,7 +82,9 @@ function IndexPage() {
         draw();
         posun = (posun / 1.005) - 0.1;
         if (posun > 1) {
-            window.requestAnimationFrame(tocka);
+            if (typeof window !== `undefined`) {
+                window.requestAnimationFrame(tocka);
+            }
         } else {
             for (let i = 0; i < items.length; i++) {
                 if (items[i].state.x < canvas.width / 2 && items[i].state.x + 80 > canvas.width / 2) {
@@ -101,12 +104,14 @@ function IndexPage() {
 
     }
 
-    window.addEventListener("resize", () => {
-        const canvas = document.getElementById("canvas");
-        const container = document.getElementById("container");
-        canvas.width = container.offsetWidth - 20;
-        draw();
-    });
+    if (typeof window !== `undefined`) {
+        window.addEventListener("resize", () => {
+            const canvas = document.getElementById("canvas");
+            const container = document.getElementById("container");
+            canvas.width = container.offsetWidth - 20;
+            draw();
+        });
+    }
 
     function addToForm() {
         pocet++;
@@ -115,8 +120,8 @@ function IndexPage() {
 
     const deleteFromForm = (index) => {
         var list = [];
-        for(let i = 0; i < form.length; i++){
-            if(i != index){
+        for (let i = 0; i < form.length; i++) {
+            if (i != index) {
                 list.push(form[i]);
                 console.log(form[i]);
             }
@@ -162,7 +167,8 @@ function IndexPage() {
                      id={"container"}>
                     <form id={"form"} action="" className={"my-5 mx-2 w-100"}>
                         {form.map((item, index) => (
-                            <FormItem key={index} pocet={index} item={item} delete={deleteFromForm} textChange={TextOnChange} colorChange={ColorOnChange}></FormItem>
+                            <FormItem key={index} pocet={index} item={item} delete={deleteFromForm}
+                                      textChange={TextOnChange} colorChange={ColorOnChange}></FormItem>
                         ))}
                     </form>
                     <div className={"btn btn-danger my-4 rounded-circle"} onClick={addToForm}><span>+</span></div>
