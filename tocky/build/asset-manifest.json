@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/tocky/static/css/main.2b0f4a6c.css",
+    "main.js": "/tocky/static/js/main.d6f41256.js",
+    "static/js/787.b2cc03c5.chunk.js": "/tocky/static/js/787.b2cc03c5.chunk.js",
+    "static/media/open.mp3": "/tocky/static/media/open.5bf88acde0b73c1a7db0.mp3",
+    "static/media/click.mp3": "/tocky/static/media/click.4c0c2a79acc5aa4aa67c.mp3",
+    "index.html": "/tocky/index.html",
+    "main.2b0f4a6c.css.map": "/tocky/static/css/main.2b0f4a6c.css.map",
+    "main.d6f41256.js.map": "/tocky/static/js/main.d6f41256.js.map",
+    "787.b2cc03c5.chunk.js.map": "/tocky/static/js/787.b2cc03c5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b0f4a6c.css",
+    "static/js/main.d6f41256.js"
+  ]
+}
